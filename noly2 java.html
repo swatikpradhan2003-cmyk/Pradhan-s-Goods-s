@@ -1,0 +1,10 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>function updatePayAmount() {
+  let total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  document.getElementById('pay-amount').textContent = '₹' + total;
+}
+
+// Call this function whenever your cart updates:
+renderCart = function() {
+  // ... existing renderCart logic ...
+  updatePayAmount();
+};
